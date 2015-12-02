@@ -1,0 +1,28 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index()
+
+# API
+
+# Attributes
+GET		/api/attributes					controllers.AttributeController.list()
+GET		/api/attributes/:id				controllers.AttributeController.get(id : Long)
+POST	/api/attributes					controllers.AttributeController.add()
+PUT 	/api/attributes/:id    			controllers.AttributeController.update(id : Long)
+DELETE	/api/attributes/:id				controllers.AttributeController.remove(id : Long)
+
+# Rules
+GET		/api/rules						controllers.RuleController.list()
+GET		/api/rules/:id					controllers.RuleController.get(id : Long)
+POST	/api/rules						controllers.RuleController.add()
+PUT 	/api/rules/:id    				controllers.RuleController.update(id : Long)
+DELETE	/api/rules/:id					controllers.RuleController.remove(id : Long)
+
+# XpertyEngine
+POST	/api/xperty						controllers.XpertyEngineController.checkRules()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)

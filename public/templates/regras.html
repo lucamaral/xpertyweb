@@ -1,0 +1,27 @@
+<div class="page-header">
+  <h1>Regras </h1>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Procurar regras..." ng-model="searchTerm">
+      <span class="input-group-btn">
+        <a href="#/regras/criar" class="btn btn-primary" type="button">
+          <span class="glyphicon glyphicon-plus"></span>
+          Nova Regra
+        </a>
+      </span>
+    </div>
+    <ul class="list-group">
+      <li class="list-group-item clearfix" ng-repeat="rule in rules | filter:searchTerm">
+        <a href="#/regras/{{rule.id}}">
+            {{rule.name}}
+        </a>
+        <button class="btn btn-danger pull-right" ng-click="remove(rule.id);">
+          Remover
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>

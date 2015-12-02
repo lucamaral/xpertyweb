@@ -1,0 +1,9 @@
+{
+  "name": "xpertyweb",
+  "version": "1.0.0",
+  "description": "Sistema especialista",
+  "license": "MIT",
+  "devDependencies": {
+    "bower": "^1.6.6"
+  }
+}

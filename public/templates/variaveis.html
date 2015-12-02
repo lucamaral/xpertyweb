@@ -1,0 +1,27 @@
+<div class="page-header">
+  <h1>Variáveis </h1>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Procurar variaveis..." ng-model="searchTerm">
+      <span class="input-group-btn">
+        <a href="#/variaveis/criar" class="btn btn-primary" type="button">
+          <span class="glyphicon glyphicon-plus"></span>
+          Nova Variável
+        </a>
+      </span>
+    </div>
+    <ul class="list-group">
+      <li class="list-group-item clearfix" ng-repeat="attribute in attributes | filter:searchTerm">
+        <a href="#/variaveis/{{attribute.id}}">
+            {{attribute.name}}
+        </a>
+        <button class="btn btn-danger pull-right" ng-click="remove(attribute.id);">
+          Remover
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>

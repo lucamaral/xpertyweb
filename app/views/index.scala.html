@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Xpertyweb</title>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("bower_components/bootstrap/dist/css/bootstrap.min.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("bower_components/sweetalert/dist/sweetalert.css")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+    </head>
+    <body ng-app="xpertyapp">
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#/">Xpertyweb</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a href="#/variaveis">Variáveis</a></li>
+              <li><a href="#/regras">Regras</a></li>
+              <li><a href="#/motor-xperty">Motor xperty <span class="glyphicon glyphicon-play"></span> </a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+        </nav>
+
+        <div class="container-fluid">
+          <div ng-view></div>
+        </div>
+
+        <!-- dependencias -->
+        <script src="@routes.Assets.at("bower_components/jquery/dist/jquery.min.js")"> </script>
+        <script src="@routes.Assets.at("bower_components/bootstrap/dist/js/bootstrap.min.js")" > </script>
+        <script src="@routes.Assets.at("bower_components/angular/angular.min.js")" > </script>
+        <script src="@routes.Assets.at("bower_components/angular-route/angular-route.min.js")" > </script>
+        <script src="@routes.Assets.at("bower_components/sweetalert/dist/sweetalert.min.js")" > </script>
+
+        <!-- fontes -->
+        <script src="@routes.Assets.at("javascripts/index.js")"> </script>
+        <script src="@routes.Assets.at("javascripts/appRouteProvider.js")"> </script>
+        <script src="@routes.Assets.at("javascripts/attributeController.js")"></script>
+        <script src="@routes.Assets.at("javascripts/ruleController.js")"></script>
+        <script src="@routes.Assets.at("javascripts/xpertyEngineController.js")"></script>
+        <script src="@routes.Assets.at("javascripts/singleRuleController.js")"></script>
+        <script src="@routes.Assets.at("javascripts/singleAttributeController.js")"></script>
+
+    </body>
+</html>
