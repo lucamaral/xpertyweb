@@ -1,4 +1,3 @@
-This is your new Play application
-=====================================
+Trabalho da disciplina de Inteligencia artificial da FURB.
 
-This file will be packaged with your application, when using `play dist`.
+Desenvolvimento de um motor de inferencia para sistemas especialistas, junto com uma simples interface web.
